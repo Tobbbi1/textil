@@ -20,37 +20,47 @@ export default function ProductConfigurator() {
 
     return (
         <div style={{
-            maxWidth: "100%",
-            margin: "0 auto",
+            maxWidth: "420px",
+            margin: "40px auto",
             padding: "20px",
             background: "#F5F5F7",
             borderRadius: "15px",
             fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
             color: "#1D1D1F",
-            boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+            boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
+            textAlign: "center"
         }}>
-            <h2 style={{ fontSize: "24px", color: "#0070F3", textAlign: "center" }}>Produktkonfigurator</h2>
-            <label>Artikel:</label>
-            <select value={selectedItem} onChange={(e) => setSelectedItem(e.target.value)}>
-                <option value="T-Shirt">T-Shirt</option>
-                <option value="Pullover">Pullover</option>
-                <option value="Jacke">Jacke</option>
-            </select>
-            <label>Farbe:</label>
-            <select value={selectedColor} onChange={(e) => setSelectedColor(e.target.value)}>
-                <option value="Weiß">Weiß</option>
-                <option value="Schwarz">Schwarz</option>
-                <option value="Blau">Blau</option>
-                <option value="Rot">Rot</option>
-            </select>
-            <label>Größe:</label>
-            <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
-            <h3 style={{ marginTop: 20, color: "#0070F3", textAlign: "center" }}>Gesamtpreis: {price} €</h3>
+            <h2 style={{ fontSize: "28px", color: "#0070F3", fontWeight: "600" }}>Produktkonfigurator</h2>
+            <div style={{ marginTop: "15px" }}>
+                <label>Artikel:</label>
+                <select value={selectedItem} onChange={(e) => setSelectedItem(e.target.value)} style={{ padding: "10px", borderRadius: "8px", border: "1px solid #DDD", width: "100%", marginTop: "8px", transition: "box-shadow 0.2s", cursor: "pointer" }}>
+                    <option value="T-Shirt">T-Shirt</option>
+                    <option value="Pullover">Pullover</option>
+                    <option value="Jacke">Jacke</option>
+                </select>
+            </div>
+
+            <div style={{ marginTop: "15px" }}>
+                <label>Farbe:</label>
+                <select value={selectedColor} onChange={(e) => setSelectedColor(e.target.value)} style={{ padding: "10px", borderRadius: "8px", border: "1px solid #DDD", width: "100%", marginTop: "8px", transition: "box-shadow 0.2s", cursor: "pointer" }}>
+                    <option value="Weiß">Weiß</option>
+                    <option value="Schwarz">Schwarz</option>
+                    <option value="Blau">Blau</option>
+                    <option value="Rot">Rot</option>
+                </select>
+            </div>
+
+            <div style={{ marginTop: "15px" }}>
+                <label>Größe:</label>
+                <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)} style={{ padding: "10px", borderRadius: "8px", border: "1px solid #DDD", width: "100%", marginTop: "8px", transition: "box-shadow 0.2s", cursor: "pointer" }}>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <h3 style={{ marginTop: 20, color: "#0070F3", fontWeight: "600", textShadow: "0 1px 3px rgba(0,0,0,0.2)" }}>Gesamtpreis: {price} €</h3>
         </div>
     );
 }
